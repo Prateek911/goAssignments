@@ -8,13 +8,15 @@ import (
 type requestHandler struct{}
 
 func (rq *requestHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello World")
+	fmt.Fprint(w, "Hello World")
 }
 
 func main() {
 	handler := &requestHandler{}
-	server := &http.Server{Addr: ":8080",
-		Handler: handler}
+	server := &http.Server{
+		Addr:    ":8080",
+		Handler: handler,
+	}
 
 	fmt.Println("Server running on http://localhost:8080")
 	err := server.ListenAndServe()
