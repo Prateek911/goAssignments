@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var (
+		planet string
+		isTrue bool
+		temp   float64
+	)
+
+	planet = "mars"
+	isTrue = true
+	temp = 19.5
+
+	fmt.Printf("Air is good on %s\n", planet)
+	fmt.Printf("It's %v\n", isTrue)
+	fmt.Printf("It is %2f\n", temp)
+
+}
