@@ -1,0 +1,13 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	name := os.Args[1]
+
+	msg := `Hi ` + name + ` Welcome!`
+	fmt.Println(msg)
+}
