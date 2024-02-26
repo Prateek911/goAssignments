@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	args := os.Args
+	usr, pwd := args[1], args[2]
+	if usr != "Prateek" && pwd != "Mandal" {
+		fmt.Printf("Invalid Credentials for user : %s\n", usr)
+		return
+	} else {
+		fmt.Printf("Welcome to my app : %s %s\n", usr, pwd)
+	}
+}
